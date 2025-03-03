@@ -1,0 +1,218 @@
+/* Import fonts (replace with the correct URLs or fonts you prefer) */
+/* Example using Google Fonts for "Fredoka" and a stand-in for "Hero" */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;700&display=swap');
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Defaults */
+body {
+  font-family: 'Open Sans', sans-serif; /* "Hero" or anything child-friendly */
+  font-size: 22px; /* Large base font size */
+  color: #355725;
+  background-color: #FFFADA; /* Default background color */
+}
+
+/* Headers, brand name, large text */
+.brand-name {
+  font-family: 'Fredoka One', sans-serif; /* "Fredoka" style */
+  font-size: 48px;
+  color: #455E8F;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-family: 'Fredoka One', sans-serif;
+  color: #355725;
+  font-size: 25px;
+}
+
+/* Common Header & Footer Styling */
+header,
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Page-Specific Header Backgrounds */
+.header-home {
+  background-color: #FFE335;
+}
+
+.header-topics {
+  background-color: #FFE335;
+}
+
+.header-feedback {
+  background-color: #FFE335;
+}
+
+/* Page-Specific Footer Backgrounds */
+.footer-home {
+  background-color: #FFE335;
+}
+
+.footer-topics {
+  background-color: #FFE335;
+}
+
+.footer-feedback {
+  background-color: #FFE335;
+}
+
+/* Large Headings */
+.heading-large {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 35px;
+  color: #355725;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.heading-medium {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 28px;
+  color: #355725;
+  margin: 1rem 0;
+}
+
+/* Body Text */
+.text-body {
+  font-family: 'Open Sans', sans-serif; /* "Hero" stand-in */
+  font-size: 22px;
+  color: #355725;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* Image Slider */
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Slider Buttons */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  background-color: #355725;
+  color: #FFFADA;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+/* Topic Sections */
+.topic-section {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+.topic-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Feedback Form */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.submit-btn {
+  background-color: #355725;
+  color: #FFFADA;
+  border: none;
+  padding: 0.75rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Text-To-Speech and Contact Buttons */
+.tts-button,
+.contact-button {
+  width: 50px;
+  height: 50px;
+  background-color: #FFE335;
+  color: #355725;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Resource List */
+.resource-list {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resource-list li {
+  margin: 0.5rem 0;
+}
+
+.resource-list a {
+  color: #455E8F;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* Optional Body Classes for different pages (if you want different BGs) */
+.home-bg {
+  background-color: #FFFADA;
+}
+.topics-bg {
+  background-color: #FFFADA;
+}
+.feedback-bg {
+  background-color: #FFFADA;
+}
+.about-bg {
+  background-color: #FFFADA;
+}
