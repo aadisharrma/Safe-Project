@@ -1,36 +1,56 @@
-/* Import fonts (replace with the correct URLs or fonts you prefer) */
-/* Example using Google Fonts for "Fredoka" and a stand-in for "Hero" */
-
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;700&display=swap');
 
-/* Base Reset */
-* {
+/* Reset / base setup */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Body Defaults */
+/* Sticky footer setup: flex container on body */
 body {
-  font-family: 'Open Sans', sans-serif; /* "Hero" or anything child-friendly */
-  font-size: 22px; /* Large base font size */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 22px; 
   color: #355725;
-  background-color: #FFFADA; /* Default background color */
+  background-color: #FFFADA; 
 }
 
-/* Headers, brand name, large text */
+/* Ensure main expands, footer sticks at bottom */
+header {
+  flex-shrink: 0;
+}
+main {
+  flex: 1;
+}
+footer {
+  flex-shrink: 0;
+}
+
+/* Brand name styling */
 .brand-name {
-  font-family: 'Fredoka One', sans-serif; /* "Fredoka" style */
+  font-family: 'Fredoka One', sans-serif; 
   font-size: 48px;
   color: #455E8F;
 }
 
-/* Navigation Bar */
+/* Nav bar container */
 .nav-bar {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between; /* space left group & right group apart */
+  align-items: center;
+  margin-top: 1rem; /* some spacing below the brand */
 }
 
+/* Left group and right group of links */
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 1rem; /* space between links */
+}
+
+/* Links */
 .nav-bar a {
   text-decoration: none;
   font-family: 'Fredoka One', sans-serif;
@@ -38,37 +58,27 @@ body {
   font-size: 25px;
 }
 
-/* Common Header & Footer Styling */
-header,
-footer {
+/* Hover fix */
+.nav-bar a:hover {
+  color: #e6a9af;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Header & Footer backgrounds */
+.header-home,
+.header-topics,
+.header-feedback {
+  background-color: #FFE335;
   padding: 1rem;
   text-align: center;
 }
 
-/* Page-Specific Header Backgrounds */
-.header-home {
-  background-color: #FFE335;
-}
-
-.header-topics {
-  background-color: #FFE335;
-}
-
-.header-feedback {
-  background-color: #FFE335;
-}
-
-/* Page-Specific Footer Backgrounds */
-.footer-home {
-  background-color: #FFE335;
-}
-
-.footer-topics {
-  background-color: #FFE335;
-}
-
+.footer-home,
+.footer-topics,
 .footer-feedback {
   background-color: #FFE335;
+  padding: 1rem;
+  text-align: center;
 }
 
 /* Large Headings */
@@ -80,6 +90,7 @@ footer {
   text-align: center;
 }
 
+/* Medium Headings */
 .heading-medium {
   font-family: 'Fredoka One', sans-serif;
   font-size: 28px;
@@ -89,7 +100,7 @@ footer {
 
 /* Body Text */
 .text-body {
-  font-family: 'Open Sans', sans-serif; /* "Hero" stand-in */
+  font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   color: #355725;
   margin-bottom: 1rem;
@@ -128,6 +139,7 @@ footer {
   padding: 0.5rem 1rem;
   cursor: pointer;
 }
+
 .prev-btn {
   left: 0;
 }
@@ -203,7 +215,7 @@ footer {
   text-decoration: none;
 }
 
-/* Optional Body Classes for different pages (if you want different BGs) */
+/* Optional page-specific background classes */
 .home-bg {
   background-color: #FFFADA;
 }
